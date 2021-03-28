@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOCKERHUB_NAME=oscarsotosanchez
+DOCKERHUB_NAME=franrobles8
 
 # Compile and publish Server
 SERVER_IMAGE_NAME="${DOCKERHUB_NAME}/server:v1.0"

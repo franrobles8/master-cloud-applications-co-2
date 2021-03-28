@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   server:
-    image: oscarsotosanchez/server:v1.0
+    image: franrobles8/server:v1.0
     ports:
       - 3000:3000
     environment:
@@ -22,7 +22,7 @@ services:
     restart: on-failure
 
   weatherservice:
-    image: oscarsotosanchez/weatherservice:v1.0
+    image: franrobles8/weatherservice:v1.0
     ports:
       - 9090:9090
     environment:
@@ -32,7 +32,7 @@ services:
     restart: on-failure
 
   planner:
-    image: oscarsotosanchez/planner:v1.0
+    image: franrobles8/planner:v1.0
     environment:
       # Enviroment variables for connect to TopoService
       - TOPO_HOST=toposervice
@@ -51,7 +51,7 @@ services:
     restart: on-failure
 
   toposervice:
-    image: oscarsotosanchez/toposervice:v1.0
+    image: franrobles8/toposervice:v1.0
     ports:
       - 8080:8080
     environment:
