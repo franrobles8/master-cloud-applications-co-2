@@ -20,6 +20,8 @@ spec:
         - containerPort: 9090
         env:
           - name: GRPC_HOST
-            value: weatherservice
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
           - name: GRPC_PORT
             value: "9090"
